@@ -173,7 +173,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public ServerResponse<User> getInfomation(Integer userId) {
+    public ServerResponse<User> getInformation(Integer userId) {
         User user = userMapper.selectByPrimaryKey(userId);
         if (user == null){
             return ServerResponse.createByErrorMessage("找不到当前用户");
@@ -188,7 +188,7 @@ public class UserServiceImpl implements IUserService {
      * @return
      */
     public ServerResponse checkAdminRole(User user) {
-        if (user != null) {
+        if (user != null && user.getRole().intValue() == Const.Role.ROLE_ADMIN) {
             return ServerResponse.createBySuccess();
         }
         return ServerResponse.createByError();
