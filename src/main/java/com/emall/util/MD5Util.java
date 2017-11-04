@@ -1,5 +1,7 @@
 package com.emall.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 import java.security.MessageDigest;
@@ -52,6 +54,10 @@ public class MD5Util {
         return MD5Encode(origin, "utf-8");
     }
 
+    public static void main(String[] args) {
+        Logger logger = LoggerFactory.getLogger(MD5Util.class);
+        logger.info("abc");
+    }
 
     private static final String hexDigits[] = {"0", "1", "2", "3", "4", "5",
             "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"};

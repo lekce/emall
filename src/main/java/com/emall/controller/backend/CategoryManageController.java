@@ -71,7 +71,7 @@ public class CategoryManageController {
         }
     }
 
-    @RequestMapping("get_deep_category.do")
+    @RequestMapping("richtext_img_upload.do")
     @ResponseBody
     public ServerResponse getCategoryAndDeepChildrenCategory(HttpSession session,@RequestParam(value = "categoryId", defaultValue = "0") Integer categoryId){
         User user = (User) session.getAttribute(Const.CURRENT_USER);
@@ -85,4 +85,6 @@ public class CategoryManageController {
             return ServerResponse.createByErrorMessage("无权限操作,需要管理员权限");
         }
     }
+
+
 }
