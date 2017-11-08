@@ -43,11 +43,10 @@ public class FileServiceImpl implements IFileService {
             targetFile.delete();
         } catch (IOException e) {
             logger.error("上传文件异常", e);
-            return null;
+            return  targetFile.getName();
         }
-        //A:abc.jpg
-        //B:abc.jpg
-        return  targetFile.getName();
+
+        return null;
     }
 
     public static void main(String[] args) {

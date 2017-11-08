@@ -1,5 +1,6 @@
 package com.emall.util;
 
+import org.apache.commons.lang.reflect.FieldUtils;
 import org.apache.commons.net.ftp.FTPClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
