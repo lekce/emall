@@ -197,7 +197,7 @@
       </if>
     </where>
   </select>
-  <select id="selectByNameAndCategoryIds" resultType="com.emall.pojo.Product" parameterType="map">
+  <select id="selectByNameAndCategoryIds" resultMap="BaseResultMap" parameterType="map">
     SELECT
     <include refid="Base_Column_List"/>
     FROM emall_product
