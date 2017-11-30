@@ -46,7 +46,9 @@ public class FileServiceImpl implements IFileService {
             return  targetFile.getName();
         }
 
-        return null;
+        //A:abc.jpg
+        //B:abc.jpg
+        return targetFile.getName();
     }
 
     public static void main(String[] args) {
