@@ -44,7 +44,7 @@ public class OrderManageController {
 
     @RequestMapping("detail.do")
     @ResponseBody
-    public ServerResponse<OrderVo> orderList(HttpSession session, Long orderNo){
+    public ServerResponse<OrderVo> orderDetail(HttpSession session, Long orderNo){
         User user = (User) session.getAttribute(Const.CURRENT_USER);
         if (user == null){
             return ServerResponse.createByErrorMessage("用户未登录");
